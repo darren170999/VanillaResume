@@ -282,6 +282,11 @@ function myFunction() {
   }
 }
 
+
+//Run the loop
+typeWriter("output", textArray);
+
+function typeWriter(id, ar) {
 // // values to keep track of the number of letters typed, which quote to use. etc. Don't change these values.
 var i = 0,
     a = 0,
@@ -309,10 +314,8 @@ var speedForward = 100, //Typing Speed
     speedBetweenLines = 1000, //Wait between first and second lines
     speedBackspace = 25; //Backspace Speed
 
-//Run the loop
-typeWriter("output", textArray);
 
-function typeWriter(id, ar) {
+
   var element = $("#" + id),
       aString = ar[a],
       eHeader = element.children("h1"), //Header element
