@@ -8,7 +8,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {font-family: "Lato", sans-serif}
+body {font-family: "Lato", sans-serif;
+background: #333;
+padding-top: 5em;
+display:flex;
+justify-content: center;}
 .mySlides {display: none}
 </style>
 </head>
@@ -70,13 +74,13 @@ body {font-family: "Lato", sans-serif}
       <p><b>Android Programming, React, Spring Boot, Spring Data JPA, PostGreSQL, MYSQL, Restful API, Apache Tomcat</b></p>    
     </div>
   </div>
-  <div class="anim-typewriter line-1 hero-image absolute mx-auto 
+  <!-- <div class="anim-typewriter line-1 hero-image absolute mx-auto 
   w-full in set-x-0 text-xl md:text-5xl text-center leading-6 translate-y-12">
     <span>ReadMe: I am</span>
     <span class="font-bold">Darren Soh</span>
     <span>and I love</span>  
     <span class="font-family"> Coding.</span>
-  </div>
+  </div> -->
   <!-- The SWE Section -->
   <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="SWE">
     <h2 class="w3-wide">SOFTWARE ENGINEERING PROJECTS</h2>
@@ -224,6 +228,17 @@ function myFunction() {
     x.className += " w3-show";
   } else { 
     x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+function typeWriter() {
+  var i = 0;
+  var txt = 'Lorem ipsum dummy text blabla.';
+  var speed = 50;
+  if (i < txt.length) {
+    document.getElementById("demo").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
   }
 }
 
