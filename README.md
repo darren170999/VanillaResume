@@ -1,2 +1,1 @@
-# darren170999.github.io
-# A window to my life.
+# My resume that i built. Sorry will buy my own domain when im richer...
