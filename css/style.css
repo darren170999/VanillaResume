@@ -80,6 +80,12 @@
      background-repeat: no-repeat;
    }
 
+   .output {
+    text-align:center;
+    font-family: 'Source Code Pro', monospace;
+    color:white;
+  }
+
 /* DEMO-SPECIFIC STYLES */
 .typewriter h1 {
   color: #fff;
