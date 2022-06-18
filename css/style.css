@@ -32,9 +32,7 @@
      display:block;
      vertical-align:bottom;
    }
-   .container {
-    display: flex; /* or inline-flex */
-  }
+   
    .count-particles{
      background: #000022;
      position: absolute;
