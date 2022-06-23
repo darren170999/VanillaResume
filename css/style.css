@@ -70,7 +70,7 @@
    }
    
    /* ---- particles.js container ---- */
-   /* #particles-js{
+   #particles-js{
      width: 100%;
      height: 100%;
      background-color: #000000;
@@ -78,7 +78,7 @@
      background-size: cover;
      background-position: 50% 50%;
      background-repeat: no-repeat;
-   } */
+   }
 
    .output {
     text-align:center;
