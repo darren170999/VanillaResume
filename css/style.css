@@ -141,7 +141,8 @@ img {
 *, *:before, *:after {
   box-sizing: border-box;
 }
-typewrite.body {
+
+.body {
   background-color:#ce3635;
   text-align: center;
   color:#fff;
