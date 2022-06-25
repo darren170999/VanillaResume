@@ -141,4 +141,11 @@ img {
 *, *:before, *:after {
   box-sizing: border-box;
 }
+typewrite.body {
+  background-color:#ce3635;
+  text-align: center;
+  color:#fff;
+  padding-top:10em;
+}
 
+* { color:#fff; text-decoration: none;}
