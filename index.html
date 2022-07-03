@@ -10,8 +10,8 @@
   <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700display=swap" rel="stylesheet"> -->
 </head>
 <body>
-<!-- Navbar -->
-<div class="w3-top">
+<!-- Old Navbar -->
+<!-- <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
       <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
       <a href="#HOME" class="w3-bar-item w3-button w3-padding-large">HOME</a>
@@ -33,10 +33,10 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+<!-- <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
     <a href="#HOME" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HOME</a>
     <a href="#EXP" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">EXP</a>
     <a href="#HACK" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">HACK</a>
@@ -44,7 +44,35 @@
     <a href="#ML" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ML</a>
     <a href="#ART" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">ART</a>
     <a href="#CONTACT" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  </div>
+  </div> -->
+
+
+<!-- New Navbar -->
+<body>
+    <nav>
+      <div class="navbar">
+        <div class="container nav-container">
+            <input class="checkbox" type="checkbox" name="" id="" />
+            <div class="hamburger-lines">
+              <span class="line line1"></span>
+              <span class="line line2"></span>
+              <span class="line line3"></span>
+            </div>  
+          <div class="logo">
+            <h1>Navbar</h1>
+          </div>
+          <div class="menu-items">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">about</a></li>
+            <li><a href="#">blogs</a></li>
+            <li><a href="#">portfolio</a></li>
+            <li><a href="#">contact</a></li>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </body>
+
 
 <!-- particles.js container -->
 <div class="w3-black" id="HOME"></div>
@@ -52,18 +80,15 @@
 <div id="particles-js">
   <div class="w3-display-middle w3-panel w3-center" style="background-color: transparent">
     <div class="centered" style="overflow:scroll; width:100%; height:800px; padding-top: 300px;">
-      <!-- <div class="typewriter"> -->
-        <h1>
+      <div class="typewriter">
+        <!-- <h1>
           <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, I am Darren Soh.", My interests includes:", "Software Engineering, ", "Machine Learning, ", " and Algorithms." ]'>
             <span class="wrap"></span>
           </a>
-        </h1>
-      <!-- </div>  -->
-      <!-- <h1>
-        <a href="" class="typewrite" data-period="2000" data-type='[ "Hi, I am Darren Soh.", My interests includes:", "Software Engineering, ", "Machine Learning, ", " and Algorithms." ]'>
-          <span class="wrap"></span>
-        </a>
-      </h1> -->
+        </h1> -->
+
+      </div> 
+
       <!--#EXP-->
       <div class="w3-container w3-content w3-padding-64" >
         <h2 class="w3-wide w3-center" style="color:white">INTERNSHIP EXPERIENCE</h2>
@@ -230,7 +255,7 @@
           </div>
         </div>
         <!-- Contact -->
-        <div class="w3-container w3-content w3-padding-64" id="CONTACT">
+        <div class="w3-container w3-content w3-padding-64">
           <h4 class="w3-wide w3-center" style="color:white">CONTACT</h4>
           <p class="w3-opacity w3-center" style="color:white"><i>You have scrolled this far! Thanks for visiting!</i></p>
           <div class="w3-row w3-padding-32">
@@ -287,64 +312,6 @@ function myFunction() {
       x.className = x.className.replace(" w3-show", "");
     }
   }>
-</script>
-<script>
-var TxtType = function(el, toRotate, period) {
-  this.toRotate = toRotate;
-  this.el = el;
-  this.loopNum = 0;
-  this.period = parseInt(period, 10) || 2000;
-  this.txt = '';
-  this.tick();
-  this.isDeleting = false;
-};
-
-TxtType.prototype.tick = function() {
-  var i = this.loopNum % this.toRotate.length;
-  var fullTxt = this.toRotate[i];
-
-  if (this.isDeleting) {
-  this.txt = fullTxt.substring(0, this.txt.length - 1);
-  } else {
-  this.txt = fullTxt.substring(0, this.txt.length + 1);
-  }
-
-  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
-
-  var that = this;
-  var delta = 200 - Math.random() * 100;
-
-  if (this.isDeleting) { delta /= 2; }
-
-  if (!this.isDeleting && this.txt === fullTxt) {
-  delta = this.period;
-  this.isDeleting = true;
-  } else if (this.isDeleting && this.txt === '') {
-  this.isDeleting = false;
-  this.loopNum++;
-  delta = 500;
-  }
-
-  setTimeout(function() {
-  that.tick();
-  }, delta);
-};
-
-window.onload = function() {
-  var elements = document.getElementsByClassName('typewrite');
-  for (var i=0; i<elements.length; i++) {
-      var toRotate = elements[i].getAttribute('data-type');
-      var period = elements[i].getAttribute('data-period');
-      if (toRotate) {
-        new TxtType(elements[i], JSON.parse(toRotate), period);
-      }
-  }
-  // INJECT CSS
-  var css = document.createElement("style");
-  css.type = "text/css";
-  css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-  document.body.appendChild(css);
-};
 </script>
 
 </html>
