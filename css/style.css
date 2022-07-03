@@ -128,25 +128,9 @@ img {
   display: flex;
 }
 
-/* .img1 { flex: 1.3344; }
-.img2 { flex: 1.3345; }
-.img3 { flex: 0.7505; }
-.img4 { flex: 1.5023; }
-.img5 { flex: 0.75; } */
-
-
 
 /* Aaaand just some general styling. */
 
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
-.body {
-  background-color:#ce3635;
-  text-align: center;
-  color:#fff;
-  padding-top:10em;
-}
-
-* { color:#fff; text-decoration: none;}
