@@ -242,7 +242,7 @@ body {
   top: 5px;
   right: 15px;
   font-size: 1.2rem;
-  color: #ffffff;
+  color: #000000;
 }
 
 .nav-container input[type="checkbox"]:checked ~ .menu-items {
