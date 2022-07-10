@@ -94,7 +94,6 @@ element.style {
 
 /* DEMO-SPECIFIC STYLES */
 .typewriter h2 {
-  display: inline;
   color: #fff;
   font-family: monospace;
   overflow:scroll; /* Ensures the content is not revealed until the animation */
